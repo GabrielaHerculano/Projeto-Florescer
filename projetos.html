@@ -4,113 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça os projetos do Projeto Florescer.">
-    <title>Projetos | Florescer</title>
+    <meta name="description" content="Conheça em detalhes as iniciativas de educação, sustentabilidade e apoio comunitário do Projeto Florescer.">
+    <title>Nossos projetos | Projeto Florescer</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <header class="cabecalho">
+        <a href="index.html" class="logo">florescer<span>.</span></a>
 
-<header>
-    <nav class="navbar container">
-        <a href="index.html" class="logo">Florescer<span>.</span></a>
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
-        <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="index.html#sobre">Sobre nós</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="cadastro.html">Seja voluntário</a></li>
-        </ul>
-    </nav>
-</header>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-<main>
-    <section class="page-banner">
-        <div class="container">
-            <span class="section-tag">Nossas iniciativas</span>
-            <h1>Projetos que fazem a diferença</h1>
-            <p>Conheça nossas áreas de atuação e descubra como pequenas contribuições podem gerar mudanças positivas.</p>
-        </div>
-    </section>
+        <nav class="navegacao" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="index.html#sobre">Quem somos</a>
+            <a href="projetos.html" aria-current="page">Projetos</a>
+            <a href="cadastro.html" class="botao botao-menu">Seja voluntário</a>
+        </nav>
+    </header>
 
-    <section class="section">
-        <div class="container">
-            <div class="cards-grid">
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" alt="Materiais para atividades educativas" loading="lazy">
-                    <div class="card-content">
-                        <h3>Educação para todos</h3>
-                        <p>Ações educativas, incentivo à leitura e arrecadação de materiais escolares para apoiar o aprendizado.</p>
-                        <a href="cadastro.html" class="btn btn-outline">Quero participar</a>
-                    </div>
-                </article>
+    <main>
+        <section class="pagina-intro">
+            <a href="index.html" class="voltar">← Voltar para o início</a>
+            <span class="etiqueta">Conheça nossas iniciativas</span>
+            <h1>Transformação que<br>começa com <span>atitudes.</span></h1>
+            <p>
+                Conheça as frentes de atuação do Projeto Florescer e descubra
+                como educação, sustentabilidade e solidariedade podem
+                contribuir para uma sociedade melhor.
+            </p>
+        </section>
 
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=700&q=80" alt="Cuidado com o meio ambiente" loading="lazy">
-                    <div class="card-content">
-                        <h3>Consciência ambiental</h3>
-                        <p>Incentivo à reciclagem, campanhas de conscientização e atividades de preservação ambiental.</p>
-                        <a href="cadastro.html" class="btn btn-outline">Quero participar</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=700&q=80" alt="Grupo de voluntários em ação" loading="lazy">
-                    <div class="card-content">
-                        <h3>Apoio comunitário</h3>
-                        <p>Campanhas solidárias, arrecadações e ações de apoio às pessoas da comunidade.</p>
-                        <a href="cadastro.html" class="btn btn-outline">Quero participar</a>
-                    </div>
-                </article>
+        <section class="detalhe-projeto secao" id="educacao">
+            <div class="detalhe-imagem">
+                <img src="img/img.eduparatodos.avif" alt="Imagem representativa do projeto Educação para Todos" loading="lazy">
+                <span class="detalhe-numero">01</span>
             </div>
 
-            <div class="donation-box">
-                <h2>Quer apoiar nossas iniciativas?</h2>
-                <p>Escolha um valor ilustrativo para conhecer uma possibilidade de contribuição.</p>
+            <div class="detalhe-conteudo">
+                <span class="etiqueta">Educação e oportunidades</span>
+                <h2>Educação para todos</h2>
+                <p>
+                    A educação é uma ferramenta essencial para ampliar
+                    oportunidades, desenvolver habilidades e transformar
+                    a realidade das pessoas. Esta iniciativa busca incentivar
+                    o aprendizado e valorizar o conhecimento como caminho
+                    para o desenvolvimento individual e coletivo.
+                </p>
 
-                <div class="donation-options">
-                    <button class="donation-option" type="button" data-value="20">R$ 20</button>
-                    <button class="donation-option" type="button" data-value="50">R$ 50</button>
-                    <button class="donation-option" type="button" data-value="100">R$ 100</button>
+                <h3>O que queremos promover</h3>
+                <ul class="lista-beneficios">
+                    <li>Acesso a materiais e recursos educativos.</li>
+                    <li>Incentivo à leitura, ao estudo e à troca de conhecimentos.</li>
+                    <li>Atividades educativas e de desenvolvimento pessoal.</li>
+                    <li>Valorização da educação como instrumento de inclusão social.</li>
+                </ul>
+
+                <div class="objetivo-box">
+                    <strong>Nosso objetivo</strong>
+                    <p>
+                        Incentivar o aprendizado contínuo e contribuir para
+                        que mais pessoas tenham oportunidades de desenvolver
+                        seu potencial.
+                    </p>
                 </div>
 
-                <p class="donation-message" aria-live="polite">Selecione um valor para continuar.</p>
-                <p><small>Demonstração acadêmica: nenhum pagamento será realizado.</small></p>
+                <a href="cadastro.html" class="botao">Quero colaborar <span>→</span></a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="cta">
-        <div class="container">
-            <h2>Faça parte da nossa rede de voluntários.</h2>
-            <p>Cadastre-se e demonstre seu interesse em contribuir com as ações do Projeto Florescer.</p>
-            <a href="cadastro.html" class="btn btn-primary">Quero ser voluntário</a>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>Florescer.</h3>
-                <p>Uma iniciativa acadêmica fictícia voltada à solidariedade e à participação comunitária.</p>
+        <section class="detalhe-projeto detalhe-reverso secao" id="meio-ambiente">
+            <div class="detalhe-imagem">
+                <img src="img/img.consiambiental.avif" alt="Imagem representativa do projeto Consciência Ambiental" loading="lazy">
+                <span class="detalhe-numero">02</span>
             </div>
-            <div class="footer-links">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html#sobre">Sobre nós</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="cadastro.html">Seja voluntário</a></li>
+
+            <div class="detalhe-conteudo">
+                <span class="etiqueta">Sustentabilidade e cuidado</span>
+                <h2>Consciência ambiental</h2>
+                <p>
+                    Cuidar do meio ambiente é uma responsabilidade compartilhada.
+                    Esta iniciativa busca incentivar hábitos mais sustentáveis
+                    e mostrar como pequenas escolhas do cotidiano podem
+                    contribuir para a preservação dos recursos naturais.
+                </p>
+
+                <h3>Como podemos agir</h3>
+                <ul class="lista-beneficios">
+                    <li>Incentivar a separação e a destinação correta dos resíduos.</li>
+                    <li>Promover a redução do desperdício de água e energia.</li>
+                    <li>Estimular o reaproveitamento e o consumo consciente.</li>
+                    <li>Desenvolver ações de conscientização ambiental.</li>
                 </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Projeto Florescer. Projeto acadêmico fictício.</p>
-        </div>
-    </div>
-</footer>
 
+                <div class="objetivo-box">
+                    <strong>Nosso objetivo</strong>
+                    <p>
+                        Incentivar a responsabilidade ambiental e fortalecer
+                        uma cultura de preservação e sustentabilidade.
+                    </p>
+                </div>
+
+                <a href="cadastro.html" class="botao">Quero colaborar <span>→</span></a>
+            </div>
+        </section>
+
+        <section class="detalhe-projeto secao" id="apoio-comunitario">
+            <div class="detalhe-imagem">
+                <img src="img/img.apoiocomunitario.avif" alt="Imagem representativa do projeto Apoio Comunitário" loading="lazy">
+                <span class="detalhe-numero">03</span>
+            </div>
+
+            <div class="detalhe-conteudo">
+                <span class="etiqueta">Acolhimento e solidariedade</span>
+                <h2>Apoio comunitário</h2>
+                <p>
+                    Uma comunidade mais forte é construída por pessoas que
+                    se apoiam. Esta iniciativa valoriza a cooperação, a escuta
+                    e a participação social para aproximar pessoas e incentivar
+                    ações solidárias.
+                </p>
+
+                <h3>O que podemos construir juntos</h3>
+                <ul class="lista-beneficios">
+                    <li>Campanhas de arrecadação e doação de itens essenciais.</li>
+                    <li>Ações de voluntariado e mobilização comunitária.</li>
+                    <li>Incentivo à colaboração entre moradores e parceiros.</li>
+                    <li>Iniciativas de acolhimento e apoio às necessidades locais.</li>
+                </ul>
+
+                <div class="objetivo-box">
+                    <strong>Nosso objetivo</strong>
+                    <p>
+                        Fortalecer os vínculos comunitários e incentivar
+                        uma rede de apoio baseada no respeito, na empatia
+                        e na solidariedade.
+                    </p>
+                </div>
+
+                <a href="cadastro.html" class="botao">Quero colaborar <span>→</span></a>
+            </div>
+        </section>
+
+        <section class="chamada">
+            <div>
+                <span class="etiqueta etiqueta-clara">Sua participação importa</span>
+                <h2>Vamos fazer essa<br>ideia florescer?</h2>
+                <p>
+                    Cada pessoa tem algo valioso para compartilhar.
+                    Venha fazer parte dessa iniciativa.
+                </p>
+            </div>
+            <a href="cadastro.html" class="botao botao-claro">Seja voluntário <span>→</span></a>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <a href="index.html" class="logo logo-rodape">florescer<span>.</span></a>
+        <p>Juntos, cultivamos um futuro melhor.</p>
+        <span class="copyright">Projeto Florescer · <span id="ano-atual"></span></span>
+    </footer>
 </body>
 </html>

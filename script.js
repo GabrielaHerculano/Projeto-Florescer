@@ -112,3 +112,77 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.querySelector("#form-doacao");
+
+    if (!formulario) return;
+
+    const campoPersonalizado = document.querySelector("#valor-personalizado");
+    const mensagem = document.querySelector("#mensagem-doacao");
+    const opcoesValor = formulario.querySelectorAll('input[name="valor"]');
+
+    campoPersonalizado.addEventListener("input", function () {
+        if (campoPersonalizado.value !== "") {
+            opcoesValor.forEach(function (opcao) {
+                opcao.checked = false;
+                opcao.required = false;
+            });
+        } else {
+            opcoesValor.forEach(function (opcao, indice) {
+                opcao.required = indice === 0;
+            });
+        }
+    });
+
+    opcoesValor.forEach(function (opcao) {
+        opcao.addEventListener("change", function () {
+            if (opcao.checked) {
+                campoPersonalizado.value = "";
+            }
+        });
+    });
+
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const valorSelecionado = formulario.querySelector(
+            'input[name="valor"]:checked'
+        );
+
+        const valorDigitado = Number(
+            campoPersonalizado.value.replace(",", ".")
+        );
+
+        let valor = 0;
+
+        if (campoPersonalizado.value.trim() !== "") {
+            valor = valorDigitado;
+        } else if (valorSelecionado) {
+            valor = Number(valorSelecionado.value);
+        }
+
+        if (!Number.isFinite(valor) || valor <= 0) {
+            mensagem.textContent = "Escolha ou informe um valor válido para continuar.";
+            return;
+        }
+
+        const frequencia = formulario.querySelector(
+            'input[name="frequencia"]:checked'
+        );
+
+        const valorFormatado = valor.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        });
+
+        const periodicidade = frequencia && frequencia.value === "mensal"
+            ? "mensal"
+            : "única";
+
+        mensagem.textContent =
+            "Sua contribuição de " + valorFormatado +
+            " (" + (periodicidade === "mensal" ? "recorrência mensal" : "doação única") +
+            ") foi selecionada! Esta demonstração não realiza pagamentos.";
+    });
+});

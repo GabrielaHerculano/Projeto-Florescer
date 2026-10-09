@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contribua com o Projeto Florescer e ajude a transformar vidas por meio da educação, do meio ambiente e do apoio comunitário.">
+    <title>Contribuições | Projeto Florescer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="index.html" class="logo">Projeto Florescer</a>
+
+        <nav class="navegacao">
+            <a href="index.html">Início</a>
+            <a href="index.html#quem-somos">Quem somos</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Seja voluntário</a>
+            <a href="contribuicoes.html" class="link-ativo">Contribuições</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contribuicoes-hero">
+            <div class="contribuicoes-hero-conteudo">
+                <span class="etiqueta">Faça parte da mudança</span>
+                <h1>Pequenas atitudes podem transformar muitas vidas.</h1>
+                <p>
+                    Sua contribuição ajuda a fortalecer iniciativas de educação,
+                    preservação ambiental e apoio comunitário. Escolha como
+                    deseja fazer parte dessa transformação.
+                </p>
+                <a href="#doacoes" class="botao-principal">Quero contribuir</a>
+            </div>
+
+            <div class="contribuicoes-hero-imagem">
+                <img
+                    src="img/img.apoiocomunitario.avif"
+                    alt="Ações de apoio comunitário do Projeto Florescer"
+                >
+            </div>
+        </section>
+
+        <section class="secao-contribuicoes" id="doacoes">
+            <div class="titulo-secao">
+                <span class="etiqueta">Sua ajuda faz a diferença</span>
+                <h2>Escolha o valor da sua doação</h2>
+                <p>
+                    Toda contribuição é importante. Selecione um valor
+                    ou informe quanto gostaria de doar.
+                </p>
+            </div>
+
+            <form id="form-doacao" class="form-doacao">
+                <div class="opcoes-doacao">
+                    <label class="opcao-doacao">
+                        <input type="radio" name="valor" value="15" required>
+                        <span class="opcao-doacao-conteudo">
+                            <strong>R$ 15</strong>
+                            <small>Pequenos começos</small>
+                            <span>Ajuda na aquisição de materiais básicos.</span>
+                        </span>
+                    </label>
+
+                    <label class="opcao-doacao">
+                        <input type="radio" name="valor" value="30">
+                        <span class="opcao-doacao-conteudo">
+                            <strong>R$ 30</strong>
+                            <small>Cuidado essencial</small>
+                            <span>Contribui para alimentos e itens essenciais.</span>
+                        </span>
+                    </label>
+
+                    <label class="opcao-doacao">
+                        <input type="radio" name="valor" value="50">
+                        <span class="opcao-doacao-conteudo">
+                            <strong>R$ 50</strong>
+                            <small>Transformação verde</small>
+                            <span>Apoia atividades ambientais e materiais.</span>
+                        </span>
+                    </label>
+
+                    <label class="opcao-doacao">
+                        <input type="radio" name="valor" value="100">
+                        <span class="opcao-doacao-conteudo">
+                            <strong>R$ 100</strong>
+                            <small>Impacto ampliado</small>
+                            <span>Fortalece as ações dos projetos sociais.</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="valor-personalizado">
+                    <label for="valor-personalizado">Ou escolha outro valor (R$)</label>
+                    <input
+                        type="number"
+                        id="valor-personalizado"
+                        name="valor-personalizado"
+                        min="1"
+                        step="0.01"
+                        placeholder="Ex.: 75,00"
+                    >
+                </div>
+
+                <div class="frequencia-doacao">
+                    <p>Como deseja contribuir?</p>
+
+                    <label>
+                        <input type="radio" name="frequencia" value="unica" checked>
+                        Doação única
+                    </label>
+
+                    <label>
+                        <input type="radio" name="frequencia" value="mensal">
+                        Doação mensal
+                    </label>
+                </div>
+
+                <button type="submit" class="botao-principal botao-doacao">
+                    Continuar com minha contribuição
+                </button>
+
+                <p id="mensagem-doacao" class="mensagem-formulario" role="status"></p>
+
+                <p class="aviso-doacao">
+                    Esta é uma demonstração acadêmica. Nenhum pagamento será
+                    realizado ou dado financeiro será solicitado.
+                </p>
+            </form>
+        </section>
+
+        <section class="secao-contribuicoes secao-itens">
+            <div class="titulo-secao">
+                <span class="etiqueta">Doe além do dinheiro</span>
+                <h2>Outras formas de ajudar</h2>
+                <p>
+                    Você também pode contribuir com itens, tempo e divulgação.
+                </p>
+            </div>
+
+            <div class="contribuicoes-grid">
+                <article class="contribuicao-card">
+                    <div class="contribuicao-icone">♡</div>
+                    <h3>Alimentos e itens essenciais</h3>
+                    <p>
+                        Doe alimentos não perecíveis, produtos de higiene
+                        e outros itens que possam apoiar famílias atendidas.
+                    </p>
+                </article>
+
+                <article class="contribuicao-card">
+                    <div class="contribuicao-icone">✎</div>
+                    <h3>Livros e materiais escolares</h3>
+                    <p>
+                        Materiais escolares, livros em bom estado e recursos
+                        educativos podem apoiar as iniciativas de educação.
+                    </p>
+                </article>
+
+                <article class="contribuicao-card">
+                    <div class="contribuicao-icone">♧</div>
+                    <h3>Itens para ações ambientais</h3>
+                    <p>
+                        Mudas, sementes, ferramentas de jardinagem e materiais
+                        adequados podem contribuir com atividades ambientais.
+                    </p>
+                </article>
+
+                <article class="contribuicao-card">
+                    <div class="contribuicao-icone">+</div>
+                    <h3>Tempo e voluntariado</h3>
+                    <p>
+                        Compartilhe suas habilidades, participe de campanhas
+                        e ajude na organização das ações comunitárias.
+                    </p>
+                    <a href="cadastro.html" class="link-card">Quero ser voluntário →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contribuicoes-projetos">
+            <div>
+                <span class="etiqueta">Juntos somos mais fortes</span>
+                <h2>Conheça as causas que você pode apoiar.</h2>
+                <p>
+                    Educação, meio ambiente e apoio comunitário:
+                    três iniciativas que buscam construir um futuro melhor.
+                </p>
+            </div>
+
+            <a href="projetos.html" class="botao-secundario">
+                Conhecer os projetos
+            </a>
+        </section>
+
+        <section class="contato-contribuicao">
+            <h2>Quer contribuir de outra maneira?</h2>
+            <p>
+                Entre em contato com a equipe do Projeto Florescer
+                para conversar sobre doações de itens ou parcerias.
+            </p>
+            <a href="cadastro.html" class="botao-principal">
+                Falar com o projeto
+            </a>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; <span id="ano-atual"></span> Projeto Florescer. Todos os direitos reservados.</p>
+        <p>Juntos, cultivamos um futuro melhor.</p>
+    </footer>
+
+</body>
+</html>
