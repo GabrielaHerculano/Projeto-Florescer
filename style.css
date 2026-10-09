@@ -1,0 +1,1055 @@
+
+/* ==========================================
+   PROJETO FLORESCER
+   Identidade visual: minimalista e moderna
+========================================== */
+
+/* 1. CONFIGURAÇÕES GERAIS */
+
+:root {
+    --green: #28734d;
+    --green-hover: #205c3d;
+    --green-soft: #edf5ef;
+
+    --black: #202421;
+    --gray-900: #343a36;
+    --gray-700: #646b66;
+    --gray-500: #858b86;
+    --gray-300: #dfe3df;
+    --gray-200: #eaedea;
+    --gray-100: #f5f6f4;
+
+    --white: #ffffff;
+    --background: #ffffff;
+
+    --radius-sm: 5px;
+    --radius-md: 9px;
+    --radius-lg: 13px;
+
+    --container: 1120px;
+    --shadow: 0 5px 20px rgba(25, 40, 30, 0.055);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--gray-900);
+    background: var(--background);
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(var(--container), calc(100% - 48px));
+    margin-inline: auto;
+}
+
+::selection {
+    color: var(--white);
+    background: var(--green);
+}
+
+
+/* 2. CABEÇALHO E NAVEGAÇÃO */
+
+header {
+    position: relative;
+    z-index: 10;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.logo {
+    flex-shrink: 0;
+    color: var(--black);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    display: inline-block;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+/* Botão do menu mobile */
+
+.menu-toggle {
+    display: none;
+    padding: 7px 10px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    color: var(--black);
+    font-size: 1.25rem;
+}
+
+
+/* 3. BOTÕES */
+
+.btn {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 20px;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(40, 115, 77, 0.3);
+    outline-offset: 3px;
+}
+
+.btn-primary {
+    color: var(--white);
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.btn-primary:hover {
+    color: var(--white);
+    background: var(--green-hover);
+    border-color: var(--green-hover);
+}
+
+.btn-secondary {
+    color: var(--white);
+    background: var(--black);
+    border-color: var(--black);
+}
+
+.btn-secondary:hover {
+    color: var(--white);
+    background: #3c443e;
+    border-color: #3c443e;
+}
+
+.btn-outline {
+    color: var(--gray-900);
+    background: var(--white);
+    border-color: var(--gray-300);
+}
+
+.btn-outline:hover {
+    color: var(--green);
+    background: var(--green-soft);
+    border-color: var(--green);
+}
+
+
+/* 4. APRESENTAÇÃO PRINCIPAL */
+
+.hero {
+    padding: 68px 0 72px;
+    background: var(--white);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 64px;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-text h1 {
+    margin-bottom: 22px;
+    color: var(--black);
+
+    font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    max-width: 470px;
+    margin-bottom: 28px;
+
+    color: var(--gray-700);
+    font-size: 1.02rem;
+    line-height: 1.85;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Uma imagem principal, com dimensões controladas */
+
+.hero-image {
+    width: 100%;
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius-lg);
+}
+
+
+/* 5. SEÇÕES */
+
+.section {
+    padding: 76px 0;
+}
+
+.section-header {
+    max-width: 640px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.section-header h2 {
+    margin-bottom: 13px;
+    color: var(--black);
+
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.25;
+}
+
+.section-header p {
+    color: var(--gray-700);
+    font-size: 0.96rem;
+}
+
+.section-tag {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 4px 9px;
+
+    border-radius: 4px;
+    background: var(--green-soft);
+    color: var(--green);
+
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+
+/* 6. SOBRE A ORGANIZAÇÃO */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 58px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 420px;
+    height: 290px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+.about-text h2 {
+    margin-bottom: 18px;
+    color: var(--black);
+
+    font-size: clamp(1.8rem, 3vw, 2.35rem);
+    letter-spacing: -1px;
+    line-height: 1.25;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: var(--gray-700);
+    font-size: 0.96rem;
+}
+
+
+/* 7. INDICADORES */
+
+.stats {
+    padding: 36px 0;
+    background: var(--gray-100);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.stat-item {
+    padding: 10px 16px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    margin-bottom: 3px;
+    color: var(--green);
+
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.3;
+}
+
+.stat-item p {
+    color: var(--gray-700);
+    font-size: 0.9rem;
+}
+
+
+/* 8. CARDS DE PROJETOS */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.card:hover {
+    border-color: #c8d7cc;
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.card img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 21px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--black);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    line-height: 1.4;
+}
+
+.card-content p {
+    margin-bottom: 17px;
+    color: var(--gray-700);
+    font-size: 0.91rem;
+    line-height: 1.7;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--green);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* 9. CHAMADA PARA AÇÃO */
+
+.cta {
+    padding: 54px 24px;
+    background: var(--green-soft);
+    text-align: center;
+}
+
+.cta h2 {
+    max-width: 650px;
+    margin: 0 auto 14px;
+    color: var(--black);
+
+    font-size: clamp(1.8rem, 3vw, 2.35rem);
+    letter-spacing: -1px;
+    line-height: 1.3;
+}
+
+.cta p {
+    max-width: 580px;
+    margin: 0 auto 24px;
+    color: var(--gray-700);
+}
+
+
+/* 10. PÁGINAS INTERNAS */
+
+.page-banner {
+    padding: 48px 24px;
+    background: var(--gray-100);
+    border-bottom: 1px solid var(--gray-200);
+    text-align: center;
+}
+
+.page-banner h1 {
+    margin-bottom: 10px;
+    color: var(--black);
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+}
+
+.page-banner p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--gray-700);
+}
+
+
+/* 11. ÁREA DE DOAÇÃO */
+
+.donation-box {
+    margin-top: 32px;
+    padding: 28px;
+
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    background: var(--gray-100);
+    text-align: center;
+}
+
+.donation-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 22px 0;
+}
+
+.donation-option {
+    min-width: 94px;
+    min-height: 42px;
+    padding: 9px 16px;
+
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--gray-900);
+
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.donation-option:hover,
+.donation-option.active {
+    color: var(--green);
+    border-color: var(--green);
+    background: var(--green-soft);
+}
+
+.donation-message {
+    margin-top: 14px;
+    color: var(--green);
+    font-weight: 600;
+}
+
+
+/* 12. FORMULÁRIO DE CADASTRO */
+
+.form-section {
+    padding: 54px 0 72px;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    align-items: start;
+    gap: 30px;
+}
+
+.form-info {
+    padding: 28px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    background: var(--gray-100);
+}
+
+.form-info h2 {
+    margin-bottom: 14px;
+    color: var(--black);
+
+    font-size: 1.55rem;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
+}
+
+.form-info p {
+    margin-bottom: 14px;
+    color: var(--gray-700);
+    font-size: 0.93rem;
+}
+
+.form-image {
+    margin-top: 23px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.form-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.form-card {
+    min-width: 0;
+    padding: 30px;
+
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.form-card h2 {
+    margin-bottom: 8px;
+    color: var(--black);
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+}
+
+.form-description {
+    margin-bottom: 25px;
+    color: var(--gray-700);
+    font-size: 0.92rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 17px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--gray-900);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 12px;
+
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--gray-900);
+
+    font-size: 0.92rem;
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9a9f9b;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(40, 115, 77, 0.09);
+}
+
+.form-group textarea {
+    min-height: 115px;
+    resize: vertical;
+}
+
+.form-group small {
+    color: var(--gray-500);
+    font-size: 0.8rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 8px 0 22px;
+}
+
+.checkbox-group input {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    accent-color: var(--green);
+}
+
+.checkbox-group label {
+    color: var(--gray-700);
+    font-size: 0.87rem;
+    line-height: 1.6;
+}
+
+.form-card .btn {
+    width: 100%;
+}
+
+.form-message {
+    display: none;
+    margin-top: 16px;
+    padding: 13px 15px;
+
+    border: 1px solid #d2e5d6;
+    border-radius: 6px;
+    background: var(--green-soft);
+    color: var(--green);
+
+    font-size: 0.91rem;
+    font-weight: 600;
+}
+
+.form-message.show {
+    display: block;
+}
+
+
+/* 13. RODAPÉ */
+
+footer {
+    padding: 40px 0 18px;
+    background: #202923;
+    color: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+.footer-brand {
+    max-width: 380px;
+}
+
+.footer-brand h3 {
+    margin-bottom: 10px;
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+.footer-brand p {
+    color: #c3cbc5;
+    font-size: 0.91rem;
+}
+
+.footer-links h4 {
+    margin-bottom: 12px;
+    color: var(--white);
+    font-size: 0.95rem;
+}
+
+.footer-links ul {
+    display: grid;
+    gap: 7px;
+}
+
+.footer-links a {
+    color: #c3cbc5;
+    font-size: 0.89rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #a5d7b5;
+}
+
+.footer-bottom {
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    color: #aeb8b0;
+    text-align: center;
+    font-size: 0.82rem;
+}
+
+
+/* 14. TABLETS */
+
+@media (max-width: 900px) {
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .about-grid {
+        gap: 32px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .form-layout {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 18px;
+    }
+
+    .form-card,
+    .form-info {
+        padding: 22px;
+    }
+}
+
+
+/* 15. CELULARES */
+
+@media (max-width: 650px) {
+    .container {
+        width: calc(100% - 36px);
+    }
+
+    .navbar {
+        min-height: 66px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding-bottom: 12px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 11px 0;
+        border-top: 1px solid var(--gray-200);
+    }
+
+    .hero {
+        padding: 42px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(2.25rem, 10vw, 3rem);
+        letter-spacing: -1.4px;
+    }
+
+    .hero-text p {
+        font-size: 0.96rem;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 235px;
+    }
+
+    .section {
+        padding: 48px 0;
+    }
+
+    .section-header {
+        margin-bottom: 28px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .about-image img {
+        max-width: none;
+        height: 230px;
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .stats {
+        padding: 24px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .stat-item {
+        padding: 10px;
+    }
+
+    .stat-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .card img {
+        height: 195px;
+    }
+
+    .card-content {
+        padding: 19px;
+    }
+
+    .cta {
+        padding: 42px 18px;
+    }
+
+    .cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .page-banner {
+        padding: 38px 18px;
+    }
+
+    .form-section {
+        padding: 35px 0 48px;
+    }
+
+    .form-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .form-card,
+    .form-info {
+        padding: 21px;
+    }
+
+    .donation-box {
+        padding: 21px 15px;
+    }
+
+    .donation-option {
+        flex: 1 1 80px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    .footer-bottom {
+        line-height: 1.6;
+    }
+}
+
+
+/* 16. TELAS MUITO PEQUENAS */
+
+@media (max-width: 360px) {
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .form-card,
+    .form-info {
+        padding: 16px;
+    }
+
+    .donation-options {
+        gap: 7px;
+    }
+
+    .donation-option {
+        min-width: 75px;
+        padding: 9px 11px;
+    }
+}
+
+
+/* 17. ACESSIBILIDADE: MOVIMENTO REDUZIDO */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

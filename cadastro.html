@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre seu interesse em participar do Projeto Florescer.">
+    <title>Seja voluntário | Florescer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar container">
+        <a href="index.html" class="logo">Florescer<span>.</span></a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#sobre">Sobre nós</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="cadastro.html">Seja voluntário</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="page-banner">
+        <div class="container">
+            <span class="section-tag">Faça parte</span>
+            <h1>Seja um voluntário</h1>
+            <p>Preencha o formulário e conte como gostaria de participar das iniciativas.</p>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="container form-layout">
+
+            <aside class="form-info">
+                <h2>Seu tempo pode transformar realidades.</h2>
+                <p>O voluntariado é uma oportunidade de compartilhar conhecimentos, desenvolver habilidades e colaborar com iniciativas que beneficiam a comunidade.</p>
+                <p>Informe seus interesses para demonstrar como gostaria de participar das ações do projeto.</p>
+
+                <div class="form-image">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=700&q=80" alt="Pessoas reunidas em uma atividade coletiva" loading="lazy">
+                </div>
+            </aside>
+
+            <div class="form-card">
+                <h2>Cadastro de interesse</h2>
+                <p class="form-description">Preencha os campos abaixo. Os dados serão usados apenas nesta demonstração local.</p>
+
+                <form id="volunteerForm">
+                    <div class="form-grid">
+
+                        <div class="form-group full-width">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" autocomplete="tel" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nascimento">Data de nascimento</label>
+                            <input type="date" id="nascimento" name="nascimento" autocomplete="bday" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Rua, número e bairro" autocomplete="street-address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" inputmode="numeric" maxlength="9" autocomplete="postal-code" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" autocomplete="address-level2" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="estado">Estado</label>
+                            <select id="estado" name="estado" required>
+                                <option value="">Selecione seu estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="participacao">Como gostaria de participar?</label>
+                            <select id="participacao" name="participacao" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="presencial">Voluntariado presencial</option>
+                                <option value="remoto">Apoio remoto</option>
+                                <option value="eventos">Organização de eventos</option>
+                                <option value="doacoes">Campanhas de arrecadação</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="interesse">Área de interesse</label>
+                            <select id="interesse" name="interesse" required>
+                                <option value="">Selecione uma área</option>
+                                <option value="educacao">Educação</option>
+                                <option value="ambiente">Meio ambiente</option>
+                                <option value="comunidade">Apoio comunitário</option>
+                                <option value="comunicacao">Comunicação e divulgação</option>
+                                <option value="outros">Outras atividades</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="mensagem">Conte um pouco sobre você</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte como gostaria de contribuir..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consentimento" name="consentimento" required>
+                        <label for="consentimento">Confirmo que as informações preenchidas são verdadeiras e concordo com seu uso nesta demonstração acadêmica.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar cadastro</button>
+                    <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Florescer.</h3>
+                <p>Uma iniciativa acadêmica fictícia que representa o impacto positivo da solidariedade.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre nós</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Seja voluntário</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Projeto Florescer. Projeto acadêmico fictício.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
